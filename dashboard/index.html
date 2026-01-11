@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Charges Analysis Dashboard</title>
+    <!-- Modern Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading Dataset...</p>
+    </div>
+
+    <div id="app">
+      <header>
+        <h1>Medical Cost Insights</h1>
+        <p>Analyzing factors influencing medical charges: BMI, Smoking, and Region</p>
+      </header>
+
+      <div class="dashboard-grid">
+        <!-- KPIs -->
+        <div class="kpi-container">
+          <div class="card kpi-card">
+            <h3>Total Records</h3>
+            <div class="kpi-value" id="kpi-count">-</div>
+            <div class="kpi-label">Datapoints Analyzed</div>
+          </div>
+          <div class="card kpi-card">
+            <h3>Avg. Charge</h3>
+            <div class="kpi-value" id="kpi-avg">$-</div>
+            <div class="kpi-label">Per Patient</div>
+          </div>
+          <div class="card kpi-card">
+            <h3>Smoker Impact</h3>
+            <div class="kpi-value" id="kpi-smoker">$-</div>
+            <div class="kpi-label">Extra Cost for Smokers</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="card chart-scatter" id="scatter-container">
+          <h3>BMI vs. Medical Charges (Impact of Smoking)</h3>
+        </div>
+
+        <div class="card chart-bar" id="bar-container">
+          <h3>Average Charges by Region & Gender</h3>
+        </div>
+
+        <div class="card chart-hist" id="hist-container">
+          <h3>Distribution of Medical Charges</h3>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
